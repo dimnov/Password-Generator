@@ -1,0 +1,190 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #5A8F7B;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: sans-serif;
+  margin: 0;
+  min-height: 100vh;
+  font-size: 18px;
+}
+
+.container {
+  border-radius: 8px;
+  background-color: #355764;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  min-width: 400px;
+}
+
+.header {
+  padding: 1rem;
+}
+
+.password {
+  border-radius: 8px;
+  background-color: #5A8F7B;
+  display: flex;
+  font-size: 1.5rem;
+  align-items: center;
+  height: 70px;
+  width: 100%;
+  position: relative;
+  padding: 1rem;
+  overflow: auto;
+}
+
+.password button {
+  background-color: white;
+  border: none;
+  color: rgb(29, 2, 56);
+  cursor: pointer;
+  font-family: inherit;
+  font-weight: bold;
+  padding: 0.25rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(0, 20%);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  opacity: 0;
+  border-radius: 8px;
+}
+
+.password button:hover {
+  background-color: #81CACF;
+  color: white;
+}
+
+
+.password:hover button {
+  opacity: 1;
+  transform: translate(0, 0%);
+}
+
+.body {
+  padding: 0 1rem 1rem;
+}
+
+#length {
+  width: 60px;
+  margin-bottom: 27.8px;
+  font-size: 18px;
+}
+
+.control {
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  margin: 0.75rem 0;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+/* cool checkbox */
+.toggle-pill-color input[type="checkbox"] {
+  display: none;
+}
+
+#length {
+  height: 24px;
+}
+
+.toggle-pill-color input[type="checkbox"]+label {
+  display: block;
+  position: relative;
+  width: 3em;
+  height: 1.6em;
+  margin-bottom: 20px;
+  border-radius: 1em;
+  background: #e84d4d;
+  box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  -webkit-transition: background 0.1s ease-in-out;
+  transition: background 0.1s ease-in-out;
+}
+
+.toggle-pill-color input[type="checkbox"]+label:before {
+  content: "";
+  display: block;
+  width: 1.2em;
+  height: 1.2em;
+  border-radius: 1em;
+  background: #fff;
+  box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  left: 0.2em;
+  top: 0.2em;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.toggle-pill-color input[type="checkbox"]:checked+label {
+  background: #47cf73;
+}
+
+.toggle-pill-color input[type="checkbox"]:checked+label:before {
+  box-shadow: -2px 0px 5px rgba(0, 0, 0, 0.2);
+  left: 1.6em;
+}
+
+/* cool checkbox end */
+
+/* cool button */
+.gen-pass {
+  border: none;
+  width: 100%;
+  position: relative;
+  background-color: #81CACF;
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  padding: 0.8em 1.8em;
+  cursor: pointer;
+  user-select: none;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition-duration: 0.4s;
+  -webkit-transition-duration: 0.4s;
+}
+
+.gen-pass:hover {
+  transition-duration: 0.1s;
+  background-color: #52c4cc;
+}
+
+.gen-pass:after {
+  content: "";
+  display: block;
+  position: absolute;
+  border-radius: 10px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: all 0.5s;
+  box-shadow: 0 0 10px 40px white;
+}
+
+.gen-pass:active:after {
+  box-shadow: 0 0 0 0 white;
+  position: absolute;
+  border-radius: 10px;
+  left: 0;
+  top: 0;
+  opacity: 1;
+  transition: 0s;
+}
+
+.gen-pass:active {
+  top: 1px;
+}
+
+/* cool button end */

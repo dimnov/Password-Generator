@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Password Generator</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="password">
+        <span id="password"></span>
+        <button id="copy-item">Copy</button>
+      </div>
+    </div>
+
+    <div class="body">
+
+      <div class="control">
+        <label for="length">Password Length (4-32)</label>
+        <input id="length" value="8" type="number" min="4" max="32">
+      </div>
+
+      <div class="control">
+        <label for="uppercase">Uppercase Letters</label>
+        <div class="toggle-pill-color">
+          <input type="checkbox" checked id="uppercase" name="check">
+          <label for="uppercase"></label>
+        </div>
+      </div>
+
+      <div class="control">
+        <label for="lowercase">Lowercase Letters</label>
+        <div class="toggle-pill-color">
+          <input type="checkbox" checked id="lowercase" name="check">
+          <label for="lowercase"></label>
+        </div>
+      </div>
+
+      <div class="control">
+        <label for="number">Numbers</label>
+        <div class="toggle-pill-color">
+          <input type="checkbox" id="number" name="check">
+          <label for="number"></label>
+        </div>
+      </div>
+
+      <div class="control">
+        <label for="symbol">Symbols</label>
+        <div class="toggle-pill-color">
+          <input type="checkbox" id="symbol" name="check">
+          <label for="symbol"></label>
+        </div>
+      </div>
+
+      <div class="control">
+        <label for="extra">Extra Security</label>
+        <div class="toggle-pill-color">
+          <input type="checkbox" id="extra" name="check">
+          <label for="extra"></label>
+        </div>
+      </div>
+      <button class="gen-pass" id="gen-pass">Generate Password</button>
+    </div>
+  </div>
+</body>
+
+</html>
